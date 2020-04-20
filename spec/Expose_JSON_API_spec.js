@@ -43,11 +43,11 @@ describe('express /viewVisitors endpoint', () => {
       comments: 'No comment',
     });
 
-    let viewVisitors_API = await axios.get(
+    let view = await axios.get(
       'http://localhost:5000/viewVisitors'
     );
 
-    expect(viewVisitors_API.data).toEqual([
+    expect(view.data).toEqual([
       Object({
         visitorid: 1,
         visitorname: 'Thabo Mayika',
