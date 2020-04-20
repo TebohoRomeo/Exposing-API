@@ -25,8 +25,15 @@ const addNewVisitor = async(name, assistant_name, age, visit_date, visit_time, c
                 visitTime, 
                 comments
             )
-            VALUES($1, $2, $3, $4, $5, $6)
-            RETURNING *;`, [name, assistant_name, age, visit_date, visit_time, comments]
+            VALUES('Lebo Mphago', 'Teboho', '20', '04/3/2020', '12:30', 'No comment')
+            RETURNING *;`, 
+            [name, assistant_name, age, visit_date, visit_time, comments]
+
+            // ('Lebo Mphago', 'Teboho', '20', '04/3/2020', '12:30', 'No comment')
+            // Gonna use the above as static values. before using the form.
+
+            
+            
         );
         return result.rows;
     } catch (e) {

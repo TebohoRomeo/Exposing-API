@@ -12,8 +12,9 @@ describe('Testing addNewVisitor endpoint', () => {
       visitorage: '20',
       visitdate: '04/3/2020',
       visittime: '12:30',
-      comments: 'No comment',
+      comments: 'No comment'
     });
+
     expect(response.data).toEqual([
       Object({
         visitorid: response.data[0].visitorid,
@@ -22,7 +23,7 @@ describe('Testing addNewVisitor endpoint', () => {
         visitorage: 20,
         visitdate: '04/3/2020',
         visittime: '12:30',
-        comments: 'No comment',
+        comments: 'No comment'
       }),
     ]);
 
@@ -40,12 +41,10 @@ describe('express /viewVisitors endpoint', () => {
       visitorage: '22',
       visitdate: '20/12/1997',
       visittime: '12:30',
-      comments: 'No comment',
+      comments: 'No comment'
     });
 
-    let view = await axios.get(
-      'http://localhost:5000/viewVisitors'
-    );
+    let view = await axios.get('http://localhost:5000/viewVisitors');
 
     expect(view.data).toEqual([
       Object({
@@ -55,7 +54,7 @@ describe('express /viewVisitors endpoint', () => {
         visitorage: '22',
         visitdate: '20/12/1997',
         visittime: '12:30',
-        comments: 'No comment',
+        comments: 'No comment'
       }),
     ]);
 
@@ -77,7 +76,7 @@ describe('express /viewVisitor:id endpoint', () => {
         visitorage: 20,
         visitdate: '04/3/2020',
         visittime: '12:30',
-        comments: 'No comment',
+        comments: 'No comment'
       }),
     ]);
 
