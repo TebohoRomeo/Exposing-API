@@ -7,5 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TebohoRomeo/Exposing-API.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/TebohoRomeo/Exposing-API/issues"
+  },
+  "homepage": "https://github.com/TebohoRomeo/Exposing-API#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
 }
