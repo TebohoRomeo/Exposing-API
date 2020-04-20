@@ -1,14 +1,14 @@
 const axios = require('axios');
 const readline = require('readline');
-require('dotenv').config();
+require('dotenv')
 
-let server;
+let server = require('../src/Expose_JSON_APi');
 
-beforeEach(() => {
-    server = require('../src/Expose_JSON_APi');
-});
+// beforeEach(() => {
+//     server = 
+// });
 
-describe('express /addNewVisitor endpoint', () => {
+describe('Testing addNewVisitor endpoint', () => {
 
     it(`should save to a database and return its api`, async(done) => {
         let response = await axios.post('http://localhost:5000/addNewVisitor', {
